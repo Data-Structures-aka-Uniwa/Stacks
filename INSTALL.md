@@ -78,6 +78,6 @@
 
 ---
 
-# README
+# INSTALL
 
 ## Stacks
