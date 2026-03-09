@@ -81,3 +81,80 @@
 # README
 
 ## Stacks
+
+This project implements a **Stack Data Structure** in **C** using **dynamic memory allocation**.  
+It provides standard stack operations along with additional utilities for transferring and copying data between multiple stacks.
+
+---
+
+## Table of Contents
+
+| Section | Folder/File | Description |
+|------:|-------------|-------------|
+| 1 | `INSTALL.md` | Installation and compilation instructions |
+| 2 | `README.md` | Project overview and usage guide |
+| 3 | `assign/` | Assignment description images |
+| 3.1 | `assign/Stacks.png` | Stacks assignment image (English) |
+| 3.2 | `assign/Στοίβες.png` | Stacks assignment image (Greek) |
+| 4 | `src/` | Source code of the stacks implementation |
+| 4.1 | `src/main.c` | Program entry point and stack usage example |
+| 4.2 | `src/stacks.h` | Stack data structure declarations and function prototypes |
+| 4.3 | `src/stacks.c` | Implementation of stack operations |
+
+---
+
+## 1. Features
+
+### 1.1 Dynamic Allocation
+Stacks are created with a **user-defined capacity** and allocated on the heap.
+
+### 1.2 Safety Checks
+Includes protection mechanisms to prevent runtime errors:
+
+- `isFull` - prevents stack overflow
+- `isEmpty` - prevents stack underflow
+
+### 1.3 Stack Transfer
+Transfers all elements from **Stack 1** to **Stack 2**, reversing their order.
+
+### 1.4 Stack Copying
+Creates an **exact copy of a stack** while preserving the original element order.
+
+### 1.5 Visualizer
+A `printStack` function displays stack contents **without permanently removing elements**.
+
+---
+
+## 2. Function Overview
+
+### 2.1 Core Operations
+
+**init(stack \*s, int capacity)**  
+Allocates memory for a stack with the specified capacity.
+
+**push(stack \*s, int value)**  
+Adds an integer value to the top of the stack.
+
+**pop(stack \*s, int \*value)**  
+Removes the top element from the stack and stores it through a pointer.
+
+**destroy(stack \*s)**  
+Releases dynamically allocated memory to prevent memory leaks.
+
+---
+
+## 3. Advanced Utilities
+
+**Transfer (`transfer`)**
+
+- Pops elements from **Stack 1**
+- Pushes them into **Stack 2**
+- Result: the order of elements becomes **reversed**
+
+---
+
+**Copy (`copyStack`)**
+
+- Uses a **temporary stack**
+- Copies Stack 1 into Stack 2
+- Preserves the original order in **both stacks**

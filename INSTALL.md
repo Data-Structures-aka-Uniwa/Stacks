@@ -81,3 +81,32 @@
 # INSTALL
 
 ## Stacks
+
+This guide explains how to set up, build, and run the project on your local machine.
+
+---
+
+## 1. How to Compile and Run
+
+### 1.1 Compilation
+
+Use `gcc` to compile the project:
+```bash
+gcc -o stack_app main.c stacks.c
+```
+
+### 1.2 Execution
+Run the compiled program:
+```bash
+./stack_app
+```
+
+---
+
+## 2. Important Note about printStack
+The printStack function is designed to be non-destructive.
+How it works:
+- Elements are popped from the stack and pushed into a temporary stack.
+- While transferring, the values are printed.
+- Elements are then pushed back to the original stack.
+- This ensures that the stack contents remain unchanged after printing.
