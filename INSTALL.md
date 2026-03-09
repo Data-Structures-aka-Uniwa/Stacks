@@ -88,14 +88,23 @@ This guide explains how to set up, build, and run the project on your local mach
 
 ## 1. How to Compile and Run
 
-### 1.1 Compilation
+### 1.1 Clone the Repository
+
+Open your terminal or command prompt and run:
+
+```bash
+git clone https://github.com/Data-Structures-aka-Uniwa/Stacks.git
+cd Stacks/src
+```
+
+### 1.2 Compilation
 
 Use `gcc` to compile the project:
 ```bash
 gcc -o stack_app main.c stacks.c
 ```
 
-### 1.2 Execution
+### 1.3 Execution
 Run the compiled program:
 ```bash
 ./stack_app
